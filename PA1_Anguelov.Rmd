@@ -144,7 +144,7 @@ print(median(stepsPerDayTotal$steps.summary));
 ```
 
 ## Are there differences in activity patterns between weekdays and weekends?
-1. Create a new factor variable in the dataset with two levels ??? ???weekday??? and ???weekend??? indicating whether a given date is a weekday or weekend day.
+1. Create a new factor variable in the dataset with two levels ??? weekday and weekend indicating whether a given date is a weekday or weekend day.
 ```{r check_date_is_weekday}
 # first set all day of the weeks to be weekday
 activityBeta$dow <- "weekday";
@@ -174,8 +174,7 @@ names(avgStepPerWeekday) <- c("interval", "dow", "steps");
 
 # make the plot
 ggplot(avgStepPerWeekday, aes(interval, steps)) + 
-    geom_line(colour = "red") + 
+    geom_line(colour = "black") + 
     labs(title = expression("Average number of steps across all weekday") ) +
     facet_wrap(~dow, ncol = 1)
 ```
-
