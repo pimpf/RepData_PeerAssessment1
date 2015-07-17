@@ -222,17 +222,17 @@ activityBeta$dow[weekendVector == TRUE] &lt;- &quot;weekend&quot;;
 activityBeta$dow &lt;- as.factor(activityBeta$dow);</code></pre>
 <p>Let’s see how activityBeta looks like</p>
 <pre class="r"><code>print(activityBeta[sample(nrow(activityBeta), 10), ]);</code></pre>
-<pre><code>##           steps       date interval     dow
-## 1197   0.000000 2012-10-05      340 weekday
-## 10852  0.000000 2012-11-07     1615 weekday
-## 14385  0.000000 2012-11-19     2240 weekday
-## 13332  0.000000 2012-11-16      655 weekday
-## 15142  0.000000 2012-11-22     1345 weekday
-## 5582   0.000000 2012-10-20      905 weekend
-## 9732  33.000000 2012-11-03     1855 weekend
-## 3827   0.000000 2012-10-14      650 weekend
-## 8289  82.000000 2012-10-29     1840 weekday
-## 2279   8.132075 2012-10-08     2150 weekday</code></pre>
+<pre><code>##       steps       date interval     dow
+## 13527     0 2012-11-16     2310 weekday
+## 4905      0 2012-10-18       40 weekday
+## 14579     0 2012-11-20     1450 weekday
+## 16619     0 2012-11-27     1650 weekday
+## 10598    62 2012-11-06     1905 weekday
+## 3814      0 2012-10-14      545 weekend
+## 15432   454 2012-11-23     1355 weekday
+## 3299      0 2012-10-12     1050 weekday
+## 5227      0 2012-10-19      330 weekday
+## 1231      7 2012-10-05      630 weekday</code></pre>
 <ol start="2" style="list-style-type: decimal">
 <li>Make a panel plot containing a time series plot (i.e. type = “l”) of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all weekday days or weekend days (y-axis).</li>
 </ol>
