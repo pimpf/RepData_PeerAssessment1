@@ -250,17 +250,17 @@ print(activityBeta[sample(nrow(activityBeta), 10), ]);
 ```
 
 ```
-##           steps       date interval     dow
-## 5757    0.00000 2012-10-20     2340 weekend
-## 16422   0.00000 2012-11-27       25 weekday
-## 15290   0.00000 2012-11-23      205 weekday
-## 4900    0.00000 2012-10-18       15 weekday
-## 177    17.11321 2012-10-01     1440 weekday
-## 1173    0.00000 2012-10-05      140 weekday
-## 16286   0.00000 2012-11-26     1305 weekday
-## 10205 168.00000 2012-11-05     1020 weekday
-## 17108  68.00000 2012-11-29      935 weekday
-## 15559   0.00000 2012-11-24       30 weekend
+##       steps       date interval     dow
+## 16355    36 2012-11-26     1850 weekday
+## 6456      0 2012-10-23      955 weekday
+## 1671      0 2012-10-06     1910 weekend
+## 17137     0 2012-11-29     1200 weekday
+## 5313    160 2012-10-19     1040 weekday
+## 10665     0 2012-11-07       40 weekday
+## 4216      0 2012-10-15     1515 weekday
+## 11852     0 2012-11-11      335 weekend
+## 7467      0 2012-10-26     2210 weekday
+## 5977      0 2012-10-21     1800 weekend
 ```
 
 2. Make a panel plot containing a time series plot (i.e. type = "l") of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all weekday days or weekend days (y-axis).
@@ -283,3 +283,5 @@ ggplot(avgStepPerWeekday, aes(interval, steps)) +
 ```
 
 ![](figure/weekdays_plot-1.png) 
+
+##### end of file

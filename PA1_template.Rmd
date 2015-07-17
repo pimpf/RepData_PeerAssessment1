@@ -190,3 +190,5 @@ ggplot(avgStepPerWeekday, aes(interval, steps)) +
     labs(title = expression("Average number of steps across all weekday") ) +
     facet_wrap(~dow, ncol = 1)
 ```
+
+##### end of file
