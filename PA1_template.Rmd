@@ -1,3 +1,9 @@
+---
+title: "Reproducible Research: Peer Assessment 1"
+output: 
+  html_document:
+    keep_md: yes
+---
 ## Title: "Reproducible Research: Peer Assessment 1"
 ### Author: Milen Angelov
 ### Date: 16 July, 2015
@@ -6,7 +12,13 @@
 This assignment makes use of data from a personal activity monitoring device. This device collects data at 5 minute intervals through out the day. The data consists of two months of data from an anonymous individual collected during the months of October and November, 2012 and include the number of steps taken in 5 minute intervals each day.
 
 ## Loading and preprocessing the data
-Let first load the data from the given file. It is zipped. So first check if it is already unzipped *(file exists)* and the read it using **read.csv** function.
+Let first load the data from the given file. It is zipped. So first check if it is already unzipped *(file exists)* and the read it using **read.csv** function. 
+
+```{r global_options, include=TRUE}
+# Define global option for knitr
+knitr::opts_chunk$set(fig.width=8, fig.height=6, fig.path='figure/',
+                      echo=TRUE, warning=FALSE, message=FALSE)
+```
 
 ```{r load_the_data}
 # check if the file was already unzipped
@@ -38,7 +50,7 @@ activity <- rawData[complete.cases(rawData), ];
 
 ## What is mean total number of steps taken per day?
 First let's find out total number of steps taken per day. I will use **dplyr** library:
-```{r total_number_steps, message=FALSE}
+```{r total_number_steps}
 library(dplyr);
 totalSteps <- aggregate(steps ~ date, data = activity, sum);
 ```
